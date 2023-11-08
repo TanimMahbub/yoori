@@ -1,0 +1,27 @@
+@use 'reset' as *;
+
+.key-features {
+    margin: 50px 0;
+    .features-content {
+        padding: 15px 0;
+        border: 1px solid rgba(#000, .1);
+        border-radius: 8px;
+    }
+}
+
+.feature-card {
+    padding: 0 30px;
+    border-left: 1px solid rgba(#000, .1);
+    .bi {
+        font-size: 3em;
+        margin-right: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}

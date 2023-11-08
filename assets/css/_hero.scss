@@ -1,0 +1,88 @@
+@use 'reset' as *;
+
+#heroSlider {
+    .carousel-indicators {
+        margin-left: 40%;
+    }
+
+    :is(.carousel-control-prev, .carousel-control-next) {
+        width: 5%;
+        span {
+            font-size: 3em;
+            color: #4D4D4D;
+            font-weight: 400;
+        }
+    }
+
+    .carousel-indicators .active {
+        background-color: #4D4D4D;
+    }
+}
+.item-content {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    text-align: right;
+    z-index: 1;
+    h4 {
+        font-size: 32px;
+        color: #333;
+    }
+    h2 {
+        font-size: 60px;
+        color: #444;
+        font-weight: 900;
+        margin: 15px 0;
+    }
+    p {
+        font-size: 28px;
+        font-weight: 500;
+    }
+    a {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        border: 2px solid #333;
+        padding: 12px 60px 10px 25px;
+        margin-top: 15px;
+        border-radius: 4px;
+        position: relative;
+        .bi {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            font-size: 1.5em;
+            transition: all .3s ease;
+        }
+        &:hover {
+            .bi {
+                right: 25px;
+            }
+        }
+        &:active {
+            .bi {
+                right: 20px;
+            }
+        }
+    }
+    
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        background: url(../img/slider-bg.jpg) no-repeat right center / cover;
+        z-index: -1;
+    }
+    figure {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        figcaption {
+            width: 38%;
+        }
+    }
+}
